@@ -1,0 +1,113 @@
+h1 {
+    text-align: center;
+  }
+  
+  p {
+    color: darkgray;
+    font-size: 20px;
+  }
+  
+
+  nav.main-nav a {
+    text-decoration: none;
+    color: darkblue;
+    margin-right: 15px;
+  }
+  
+  nav.main-nav a:hover {
+    color: orange;
+  }
+  
+  .box {
+    background-color: lightgray;
+    padding: 20px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  table tr:nth-child(odd) {
+    background-color: white;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+  }
+  
+  .title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .title {
+      font-size: 20px;
+    }
+  }
+  
+  nav.secondary-nav a {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  nav.secondary-nav a.active {
+    border-bottom: 2px solid blue;
+  }
+  
