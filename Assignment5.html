@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Page with Web Storage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    article {
+      background-color: #ffffff;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    aside {
+      background-color: #e9f5ff;
+      padding: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      border-left: 5px solid #007acc;
+      border-radius: 5px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+    input[type="submit"] {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<body>
+
+  <article>
+    <h2>Submit Your Feedback</h2>
+    <form>
+      <label for="username">Your Name:</label>
+      <input type="text" id="username" name="username" placeholder="Enter your name" />
+
+      <label for="feedback">Your Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" placeholder="Write your feedback here..."></textarea>
+
+      <input type="submit" value="Submit Feedback" />
+    </form>
+  </article>
+
+  <aside>
+    <h3>What is Web Storage?</h3>
+    <p><strong>localStorage</strong> and <strong>sessionStorage</strong> are part of the Web Storage API in HTML5. They allow web applications to store data directly in a user's browser.</p>
+    
+    <ul>
+      <li><strong>localStorage:</strong> Stores data with no expiration time. The data remains even after the browser is closed and reopened.</li>
+      <li><strong>sessionStorage:</strong> Stores data for one session only. The data is lost when the browser tab is closed.</li>
+    </ul>
+
+    <p>These are commonly used to save user preferences, session info, or temporarily store form data without needing a server.</p>
+  </aside>
+
+</body>
+</html>
