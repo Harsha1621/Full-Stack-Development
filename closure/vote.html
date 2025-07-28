@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Candidate Vote Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .card {
+      border: 2px solid #4CAF50;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+    }
+    .button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2 id="candidateName">Darur Vinay</h2>
+    <p><strong>ID:</strong> <span id="candidateId">C123</span></p>
+    <p><strong>Party:</strong> <span id="candidateParty">Ramaiah Party</span></p>
+    <p><strong>Constituency:</strong> <span id="candidateConstituency">North Zone</span></p>
+    <p><strong>Votes:</strong> <span id="candidateVotes">0</span></p>
+    <button class="button" onclick="addVote()">Add Vote</button>
+  </div>
+
+  <script>
+    function createCandidate(id, name, party, constituency) {
+      let votes = 0;
+
+      return {
+        getDetails: function () {
+          return { id, name, party, constituency, votes };
+        },
+        incrementVote: function () {
+          votes++;
+
+        },
+        getVoteCount: function () {
+          return votes;
+        }
+      };
+    }
+
+    // Create candidate instance using closure
+    const candidate = createCandidate("C123", "John Doe", "Green Party", "North Zone");
+
+    function addVote() {
+      candidate.incrementVote();
+      document.getElementById("candidateVotes").textContent = candidate.getVoteCount();
+    }
+  </script>
+
+</body>
+</html>
